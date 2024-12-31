@@ -78,7 +78,8 @@ module Cerata
       val_widths =
         a.inject({}) { |w, h|
           h.each { |k, v|
-            k = k.to_s; w[k] = [ w[k] || 0, v.inspect.length ].max }
+            k = k.to_s
+            w[k] = [ w[k] || 0, v.inspect.length ].max }
           w }
 
       o = StringIO.new
@@ -106,6 +107,15 @@ module Cerata
 
       o.string
     end
+
+    #def term_length(s)
+    #  s
+    #    .chars
+    #    .inject(0) { |r, c|
+    #      c.match?(/[\p{Han}\p{Hiragana}\p{Katakana}]/) ? r + 2 :
+    #      r + 1 }
+    #end
+    #alias tl term_length
   end
 end
 

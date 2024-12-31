@@ -53,6 +53,30 @@ group 'cerata' do
          {:name=>"Castafiore", :fun=>"Diva", :age=>59, :id=>123, :height=>163},
          {:name=>"Milou", :fun=>"Dog", :age=>3, :id=>12, :height=>20}])
     end
+
+    _test 'formats ok with Kanji' do
+
+      ah = [
+        { name: 'Haddock', fun: '船長', age: 52 },
+        { name: 'ティンティン', fun: 'Reporter', age: 31, weight: 60 } ]
+      ahs = Cerata.table_to_s(ah)
+puts ahs
+    end
+  end
+
+  group '.term_length' do
+
+    { '' => 0,
+      '012345' => 6,
+      '定石 b' => 6,
+
+    }.each do |k, v|
+
+      _test "returns #{v} for #{k.inspect}" do
+
+        assert_equal Cerata.term_length(k), v
+      end
+    end
   end
 end
 
