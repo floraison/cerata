@@ -6,19 +6,19 @@
 
 Tabula cerata formatting for floraison and flor, data to string formatting.
 
-## `Cerata.horizontal_a_to_s(array, indent='')`
+### `Cerata.horizontal_a_to_s(array, indent='')`
 
 TODO
 
-## `Cerata.horizontal_h_to_s(hash, indent='')`
+### `Cerata.horizontal_h_to_s(hash, indent='')`
 
 TODO
 
-## `Cerata.vertical_h_to_s(hash, indent='')`
+### `Cerata.vertical_h_to_s(hash, indent='')`
 
 TODO
 
-## `Cerata.table_to_s(array_of_hashes, indent='')`
+### `Cerata.table_to_s(array_of_hashes, indent='')`
 
 ```ruby
 require 'cerata'
