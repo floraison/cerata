@@ -42,7 +42,7 @@ Tabula cerata formatting for floraison and flor, data to string formatting.
 
   #s.add_runtime_dependency 'colorato', '~> 1.0'
 
-  s.add_development_dependency 'probatio', '~> 1.0'
+  s.add_development_dependency 'probatio', '~> 1.6'
 
   s.require_path = 'lib'
 end
